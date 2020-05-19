@@ -1,10 +1,22 @@
 import React from "react";
+import DefaultLayout from "../_pages/default";
 
-const MarketPlate = () => {
+import PokemonStore from "~/components/PokemonStore";
+import Cart from "~/components/Carrinho";
+
+import { Row, Content, Sidebar } from "./styles";
+
+export default function Marketplace() {
   return (
-    <div>
-      <h2>Loja Pokemon</h2>
-    </div>
+    <DefaultLayout>
+      <Row>
+        <Content>
+          <PokemonStore />
+        </Content>
+        <Sidebar>
+          <Cart />
+        </Sidebar>
+      </Row>
+    </DefaultLayout>
   );
-};
-export default MarketPlate;
+}
