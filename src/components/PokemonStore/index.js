@@ -41,7 +41,11 @@ function PokemonStore() {
       {pokemons.map((pokemon, index) => (
         <Card key={pokemon.name}>
           <img
-            src={image[index] === "404" ? pokemonIndefinifo : image[index]}
+            src={image[index]}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = pokemonIndefinifo;
+            }}
             alt={pokemon.name}
           />
           <p>Nome: {pokemon.name}</p>
