@@ -5,20 +5,22 @@ import PokemonStore from "~/components/PokemonStore";
 import Cart from "~/components/Carrinho";
 import CartProvider from "~/context/Cart";
 
-import { Row, Content, Sidebar } from "./styles";
+import { Container, Row, Content, Sidebar } from "./styles";
 
 export default function Marketplace() {
   return (
     <CartProvider>
       <DefaultLayout>
-        <Row>
-          <Content>
-            <PokemonStore />
-          </Content>
-          <Sidebar>
-            <Cart />
-          </Sidebar>
-        </Row>
+        <Container>
+          <Row>
+            <Content>
+              <PokemonStore />
+            </Content>
+            <Sidebar>
+              <Cart />
+            </Sidebar>
+          </Row>
+        </Container>
       </DefaultLayout>
     </CartProvider>
   );
