@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import api from "../../services/api";
+import { useCart } from "~/context/Cart";
 
 import pokemonIndefinifo from "~/assets/indefinido.png";
 import { Container, Card } from "./styles";
 
 function PokemonStore() {
   const [pokemons, setPokemon] = useState([]);
-  const [image, setImage] = useState([]);
+  const [image, setImage] = useState();
+
+  const { cart, setCart } = useCart();
 
   useEffect(() => {
     async function loadPokemon() {
@@ -23,10 +26,10 @@ function PokemonStore() {
 
       setImage(Image);
 
-      const data = response.data.pokemon.map((pokemon) => ({
+      const data = response.data.pokemon.map((pokemon, i) => ({
         ...pokemon.pokemon,
+        price: i * 32 + 10,
       }));
-
       setPokemon(data);
     }
 
@@ -38,11 +41,14 @@ function PokemonStore() {
       {pokemons.map((pokemon, index) => (
         <Card key={pokemon.name}>
           <img
-            src={image[index] ? image[index] : pokemonIndefinifo}
+            src={image[index] === "404" ? pokemonIndefinifo : image[index]}
             alt={pokemon.name}
           />
           <p>Nome: {pokemon.name}</p>
-          <span>Preço: R$200,00 </span>
+          <span>Preço: R${pokemon.price},00 </span>
+          <button type="button" onClick={() => setCart([...cart, pokemon])}>
+            Adicionar a loja
+          </button>
         </Card>
       ))}
     </Container>
