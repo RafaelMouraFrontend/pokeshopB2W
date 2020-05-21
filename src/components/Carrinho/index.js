@@ -19,9 +19,8 @@ export default function Cart() {
         <img src={pokebola} alt="Pokemon Cart" /> Pokemon Cart
       </h2>
       <ul>
-        {cart.map((pokemon, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <li key={index}>{pokemon.name}</li>
+        {cart.map((pokemon) => (
+          <li key={pokemon.name}>{pokemon.name}</li>
         ))}
       </ul>
       <Total>

@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="http://somos.b2wdigital.com/bit/"><img src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo.png" alt="Pokemon Shop" width="700"></a>
+  <a href="http://somos.b2wdigital.com/bit/"><img src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo.png" alt="Pokemon Shop" width="400"></a>
   <br>
   Pokemon Shop
   <br>
@@ -29,9 +29,9 @@ Esse é um desafio foi criada uma loja pokemon categorizada por habilidades
 
 Será necessário a instação do Node e Github em sua maquina.
 
-- * [Node](https://nodejs.org/en/) 
+- [Node](https://nodejs.org/en/) 
 
-- * [Github](https://help.github.com/en/desktop/getting-started-with-github-desktop/installing-github-desktop) 
+- [Github](https://help.github.com/en/desktop/getting-started-with-github-desktop/installing-github-desktop) 
 
 ### Rodando o projeto
 
@@ -40,7 +40,12 @@ Esse tópico é para caso queira rodar o game na sua maquina e ter acesso ao cor
 Após a instação do node e github vamos precisar rodar alguns comandos no seu terminal de comando:
 
 ```
-git clone https://
+git clone git@github.com:RafaelMouraFrontend/pokeshopB2W.git
+```
+ou
+
+```
+git clone https://github.com/RafaelMouraFrontend/pokeshopB2W.git
 ```
 
 Pronto agora com esse comando acima você clonou a pasta e tem todo acesso ao código do projeto, agora vamos rodar no terminal mais alguns comandos para fazer o game funcionar na sua maquina:
@@ -59,7 +64,7 @@ Acesse no seu navegador de preferencia
 http://localhost:3000/
 ```
 
-Ou se preferir entre no link online: https://
+Ou se preferir entre no link online: https://pokeshopb2w.netlify.app/
 
 ## Built With
 
