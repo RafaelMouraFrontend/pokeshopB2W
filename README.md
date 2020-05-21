@@ -83,4 +83,4 @@ Cheguei pensar em usar redux e redux-saga que venho estudando ultimamente, mas c
 
 Foi muito legal fazer esse teste, espero que gostem! wink
 
-OBS: Pode se futuramente ampliar e escalar amplicando as habilidades em categorias através de rotas.
+OBS: Pode se futuramente ampliar e escalar amplicando as habilidades em categorias através de rotas e um persist em localStorage.
