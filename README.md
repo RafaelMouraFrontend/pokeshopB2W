@@ -75,6 +75,9 @@ Ou se preferir entre no link online: https://pokeshopb2w.netlify.app/
 * ReactHooks 
 * Linter Airbnb
 
+## Horas de trabalho
+
+Dei start no desafio na segunda de manha(18/05) e fechei na madrugada quarta para quinta (21/05) trabalhando part time.
 
 ## Autor
 
