@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import api from "../../services/api";
 import { useCart } from "~/context/Cart";
+import { useTheme } from "~/context/Theming";
 
 import pokemonIndefinifo from "~/assets/indefinido.png";
 import { Container, Card } from "./styles";
@@ -10,10 +11,11 @@ function PokemonStore() {
   const [image, setImage] = useState();
 
   const { cart, setCart } = useCart();
+  const { theme } = useTheme();
 
   useEffect(() => {
     async function loadPokemon() {
-      const response = await api.get("type/10/");
+      const response = await api.get(`type/${theme}/`);
 
       const LinkIndex = response.data.pokemon
         .map((links) => links.pokemon.url)
@@ -33,7 +35,7 @@ function PokemonStore() {
       setPokemon(data);
     }
     loadPokemon();
-  }, []);
+  }, [theme]);
 
   return (
     <Container>

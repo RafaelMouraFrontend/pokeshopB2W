@@ -8,6 +8,9 @@ export const Row = styled.div`
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
+  @media (max-width: 490px) {
+    flex-direction: column-reverse;
+  }
 `;
 export const Content = styled.div`
   flex: 1;
